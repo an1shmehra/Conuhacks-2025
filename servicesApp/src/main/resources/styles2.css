@@ -75,6 +75,9 @@ body {
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+#lg:hover{
+    color: red;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -93,4 +96,42 @@ body {
 
 .dashboard-main p {
     color: #555;
+}
+
+/*sample images remove after*/
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-box {
+    width: 100%;
+    height: 200px;
+    background-color: black; /* Placeholder for image */
+}
+
+.image-title, .image-price {
+    padding: 10px;
+    text-align: center;
+}
+
+.image-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.image-price {
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
 }
