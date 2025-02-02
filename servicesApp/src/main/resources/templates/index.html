@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
-    <link rel="stylesheet" th:href="@{src/main/resources/static/css/styles.css}">
+    <link rel="stylesheet" th:href="@{../css/styles.css}">
 </head>
 <body>
 <div class="login-container">
     <h2>Login</h2>
 <!--        <form action="#" th:action="@{/}" th:object="${User}" method="post">-->
-    <form action="DashBoard.html">
+    <form action="#" th:action="@{DashBoard.html}">
         <div class="input-group">
             <label for="username">Username</label>
 <!--            <input type="text" id="username" name="username" required th:field="*{username}" th:if="${#fields.hasErrors('username')}">-->
