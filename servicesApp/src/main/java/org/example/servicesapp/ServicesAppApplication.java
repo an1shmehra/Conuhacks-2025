@@ -1,6 +1,5 @@
 package org.example.servicesapp;
 
-import org.example.servicesapp.util.MongoDB;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +11,6 @@ public class ServicesAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ServicesAppApplication.class, args);
-		MongoDB.Connect();
 	}
 
 	@GetMapping("/")
