@@ -39,9 +39,4 @@ public class PostController {
     public ResponseEntity<Optional<Post>> getSinglePost(@PathVariable String title) {
         return new ResponseEntity<Optional<Post>>(postService.singlePost(title), HttpStatus.OK);
     }
-
-    @RequestMapping("/")
-    public void redirect(HttpServletResponse response) throws IOException {
-        response.sendRedirect("/swagger-ui.html");
-    }
 }

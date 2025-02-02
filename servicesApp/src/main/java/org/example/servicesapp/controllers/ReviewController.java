@@ -23,7 +23,7 @@ public class ReviewController {
     private ReviewService reviewService;
 
     @PostMapping("/test")
-    public ResponseEntity<Optional<Review>> createReview(@RequestBody Map<ObjectId, ObjectId> payload) {
+    public ResponseEntity<Optional<Review>> createReview(@RequestBody Map<String, ObjectId> payload) {
         return new ResponseEntity<Optional<Review>>(Optional.ofNullable(reviewService.createPost(
                 payload.get("reviewId"), payload.get("userId"))), HttpStatus.CREATED);
     }

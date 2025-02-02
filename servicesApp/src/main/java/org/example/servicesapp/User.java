@@ -14,5 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
     @Id
     private ObjectId userId;
+    private double averageRating;
     private Post[] posts;
 }
