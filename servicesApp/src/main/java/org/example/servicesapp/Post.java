@@ -25,5 +25,4 @@ public class Post {
     private String photo;
     private VisibilityType visibilityType;
     private List<Review> reviews;
-
 }

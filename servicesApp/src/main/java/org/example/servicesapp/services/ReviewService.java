@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ReviewService {
 
     @Autowired
@@ -18,12 +20,12 @@ public class ReviewService {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public Post createPost(ObjectId postId, ObjectId reviewId) {
+    public Review createPost(ObjectId postId, ObjectId reviewId) {
         Review review = reviewRepository.insert(new Review());
         mongoTemplate.update(Post.class)
-                .matching(Criteria.where("userId").is(userId))
-                .apply(new Update().push("postId").value(post))
+                .matching(Criteria.where("postId").is(postId))
+                .apply(new Update().push("reviewId").value(review))
                 .first();
-        return post;
+        return review;
     }
 }

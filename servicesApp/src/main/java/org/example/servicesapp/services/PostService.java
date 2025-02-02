@@ -2,6 +2,7 @@ package org.example.servicesapp.services;
 
 import org.bson.types.ObjectId;
 import org.example.servicesapp.Post;
+import org.example.servicesapp.User;
 import org.example.servicesapp.repositories.PostRepository;
 import org.example.servicesapp.util.VisibilityType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,17 @@ public class PostService {
 
     @Autowired
     private MongoTemplate mongoTemplate;
+//
+//    public Post createPost(String title, String content) {
+//        Post post = new Post();
+//        post.setTitle(title);
+//        post.setContent(content);
+//        return postRepository.save(post);
+//    }
+
+    public List<Post> getAllPosts() {
+        return postRepository.findAll();
+    }
 
     public Post createPost(ObjectId userId, ObjectId postId) {
         Post post = postRepository.insert(new Post());
