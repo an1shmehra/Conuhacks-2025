@@ -30,6 +30,9 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
-.vscode/
+.vscode
+
+### Environmental Variables ###
+main
 
 .env
