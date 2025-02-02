@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class ServicesAppApplication {
 
 	public static void main(String[] args) {
@@ -16,7 +15,6 @@ public class ServicesAppApplication {
 
 	@RequestMapping("/")
 	public String root(){
-		return "Hello!";
+		return "index";
 	}
-
 }
