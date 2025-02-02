@@ -33,6 +33,4 @@ build/
 .vscode
 
 ### Environmental Variables ###
-main
-
 .env
