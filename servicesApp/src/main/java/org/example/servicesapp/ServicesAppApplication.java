@@ -12,7 +12,6 @@ public class ServicesAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ServicesAppApplication.class, args);
-		MongoDB.Connect();
 	}
 
 	@GetMapping("/")
