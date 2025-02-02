@@ -16,7 +16,7 @@ public class ServicesAppApplication {
 
 	@RequestMapping("/")
 	public String root(){
-		return "index.html";
+		return "Hello!";
 	}
 
 }
